@@ -7630,6 +7630,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     postcss-scss: ^4.0.3
     require-dir: ^1.2.0
     sass: ^1.49.9
+    smart-grid: ^2.1.2
     stylelint: ^14.5.3
     stylelint-config-standard-scss: ^3.0.0
     stylelint-order: ^5.0.0
@@ -13241,6 +13242,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
   checksum: b5167a7142c1da704c0e3af85c402002b597081dd9575031a90b4f229ca5678e9a36e8a374f1814c8156a725d17008ae3bde63b92f9cfd132526379e580bec8b
+  languageName: node
+  linkType: hard
+
+"smart-grid@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "smart-grid@npm:2.1.2"
+  checksum: e12fb8543854d22b2b573d626a485ec3eae91a7105a84c0ba019a6e39d8deafdc0c87a8e456bb3e68fa446f21daa45376b3486ffc268b1bd3118a0b20e2400b2
   languageName: node
   linkType: hard
 
