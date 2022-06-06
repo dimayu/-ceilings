@@ -105,7 +105,7 @@
             infinite: true,
             asNavFor: '.about-us__slider',
             focusOnSelect: true,
-            centerMode: false,
+            centerMode: true,
             variableWidth: true
         });
 
