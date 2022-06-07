@@ -2,7 +2,7 @@
     $(document).ready(function () {
 
         //Callback
-        $('.call-back__button').on('click', function(event) {
+        $('.call-back__button').on('click', function (event) {
             event.preventDefault();
             $(this).toggleClass('active');
             $('.messangers-list').slideToggle("fast");
@@ -123,6 +123,57 @@
         //Mask phone
         jQuery(function ($) {
             $(".phone").mask("+7 (999) 999-99-99");
+        });
+
+        //Сalculator
+        const inS = document.querySelector(".InS");
+        const rezS = document.querySelector(".rezS");
+        const inP = document.querySelector(".InP");
+        const rezP = document.querySelector(".rezP");
+        const inW = document.querySelector(".InW");
+        const inL = document.querySelector(".InL");
+        const resW = document.querySelector(".resW");
+        const resL = document.querySelector(".resL");
+        const colR = document.querySelector(".colR");
+        const angle = document.querySelector(".angle");
+        const comb = document.querySelector(".comb");
+        const pendant = document.querySelector(".pendant");
+
+        $('.calc').on('click', function () {
+            const colRR = Math.ceil(inS.value / (inW.value / 1000 * inL.value));
+            rezS.textContent = inS.value;
+            rezP.textContent = inP.value;
+            resW.textContent = inW.value;
+            resL.textContent = inL.value;
+            colR.textContent = colRR;
+            angle.textContent = Math.ceil(inP.value / 3);
+            comb.textContent = Math.ceil(inS.value / 5);
+            pendant.textContent = Math.ceil(inS.value / 5) * 4;
+        });
+
+        $('.reset').on('click', function () {
+            rezS.textContent = 0;
+            rezP.textContent = 0;
+            resW.textContent = 0;
+            resL.textContent = 0;
+            colR.textContent = 0;
+            angle.textContent = 0;
+            comb.textContent = 0;
+            pendant.textContent = 0;
+            $('.calc').attr('disabled', 'disabled');
+        });
+
+        $('.input').on('keyup', function () {
+            let empty = false;
+
+            $('.input').each(function () {
+                empty = $(this).val().length == "";
+            });
+
+            if (empty)
+                $('.calc').attr('disabled', 'disabled');
+            else
+                $('.calc').attr('disabled', false);
         });
 
     });
